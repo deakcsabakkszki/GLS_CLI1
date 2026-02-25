@@ -11,7 +11,7 @@
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid Grid.Column="0" x:Name="datagrid">
+        <DataGrid Grid.Column="0" x:Name="datagrid" SelectionChanged="dataGrid_SelectionChanged">
             
         </DataGrid>
         <StackPanel Grid.Column="1" Orientation="Vertical" Margin="5">
