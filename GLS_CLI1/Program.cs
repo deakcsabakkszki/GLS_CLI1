@@ -1,7 +1,21 @@
-﻿namespace GLS_CLI1
+﻿using System.Security.Cryptography;
+
+namespace GLS_CLI1
 {
     public class Program
     {
+        public double NapiFogyasztas(int km, int fogyasztas)
+        {
+            if (km<=0 || fogyasztas<=0)
+            {
+                return 0;
+            }
+
+
+            return fogyasztas / (km / 100);
+        }
+
+
         static void Main(string[] args)
         {
             string[] adatok = File.ReadAllLines("GLS.txt");
