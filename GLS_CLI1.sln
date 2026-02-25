@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLS_CLI1", "GLS_CLI1\GLS_CL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLS_CLI1Tests", "GLS_CLI1Tests\GLS_CLI1Tests.csproj", "{1FEE4B36-8016-4452-8554-EAEC62921FCE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLS_WPF", "GLS_WPF\GLS_WPF.csproj", "{69131468-55A9-42CA-8E4D-8136B6DDD142}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1FEE4B36-8016-4452-8554-EAEC62921FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FEE4B36-8016-4452-8554-EAEC62921FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FEE4B36-8016-4452-8554-EAEC62921FCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69131468-55A9-42CA-8E4D-8136B6DDD142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69131468-55A9-42CA-8E4D-8136B6DDD142}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69131468-55A9-42CA-8E4D-8136B6DDD142}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69131468-55A9-42CA-8E4D-8136B6DDD142}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
