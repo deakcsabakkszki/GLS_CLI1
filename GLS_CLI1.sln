@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36811.4 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLS_CLI1", "GLS_CLI1\GLS_CLI1.csproj", "{D3278B91-0EB4-4B5C-8F74-E98B0AF8EC62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLS_CLI1Tests", "GLS_CLI1Tests\GLS_CLI1Tests.csproj", "{1FEE4B36-8016-4452-8554-EAEC62921FCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D3278B91-0EB4-4B5C-8F74-E98B0AF8EC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3278B91-0EB4-4B5C-8F74-E98B0AF8EC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3278B91-0EB4-4B5C-8F74-E98B0AF8EC62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FEE4B36-8016-4452-8554-EAEC62921FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FEE4B36-8016-4452-8554-EAEC62921FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FEE4B36-8016-4452-8554-EAEC62921FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FEE4B36-8016-4452-8554-EAEC62921FCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
