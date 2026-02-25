@@ -38,6 +38,14 @@ namespace GLS_CLI1
             Console.WriteLine($"Az összes megtett kilométer: {km} km");
             int fogy = autoLista.Sum(x => x.napiFogyasztasLiter);
             Console.WriteLine($"Átlagos fogyasztás: {NapiFogyasztas(km,fogy)} liter/100 km");
+
+            var sofor = autoLista.GroupBy(s => s.sofNev)
+                .Select(x => new { SoforNev = x.Key, VezetettNap = x.Count() })
+                .OrderByDescending(y => y.VezetettNap)
+                .First();
+
+            Console.WriteLine($"7. feladat \n\tLegtöbbet vezető sofőr: {sofor.SoforNev}, napok száma: {sofor.VezetettNap}");
+
         }
     }
 }
