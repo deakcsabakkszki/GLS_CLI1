@@ -19,6 +19,9 @@
                 soforok.Add(item.sofNev);
             }
             Console.WriteLine($"Különböző sofőrok száma: {soforok.Count()}");
+
+            int km = autoLista.Sum(x => x.napiKilometer);
+            Console.WriteLine($"Az összes megtett kilométer: {km} km");
         }
     }
 }
