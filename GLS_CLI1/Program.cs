@@ -4,7 +4,7 @@ namespace GLS_CLI1
 {
     public class Program
     {
-        public double NapiFogyasztas(int km, int fogyasztas)
+        public static double NapiFogyasztas(int km, int fogyasztas)
         {
             if (km<=0 || fogyasztas<=0)
             {
@@ -12,7 +12,7 @@ namespace GLS_CLI1
             }
 
 
-            return fogyasztas / (km / 100);
+            return fogyasztas / (km / 100.0);
         }
 
 
@@ -36,6 +36,8 @@ namespace GLS_CLI1
 
             int km = autoLista.Sum(x => x.napiKilometer);
             Console.WriteLine($"Az összes megtett kilométer: {km} km");
+            int fogy = autoLista.Sum(x => x.napiFogyasztasLiter);
+            Console.WriteLine($"Átlagos fogyasztás: {NapiFogyasztas(km,fogy)} liter/100 km");
         }
     }
 }
