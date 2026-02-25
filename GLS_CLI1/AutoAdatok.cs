@@ -26,6 +26,13 @@ namespace GLS_CLI1
             this.napiFogyasztasLiter = int.Parse(darabok[4]);
         }
 
-
+        public AutoAdatok(string datum, string sofNev, int napiKilometer, int kezbCsomagSzam, int napiFogyasztasLiter)
+        {
+            this.datum = datum;
+            this.sofNev = sofNev;
+            this.napiKilometer = napiKilometer;
+            this.kezbCsomagSzam = kezbCsomagSzam;
+            this.napiFogyasztasLiter = napiFogyasztasLiter;
+        }
     }
 }

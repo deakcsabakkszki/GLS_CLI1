@@ -18,16 +18,34 @@ namespace GLS_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<AutoAdatok> autoLista = new List<AutoAdatok>();
         public MainWindow()
         {
             InitializeComponent();
             string[] adatok = File.ReadAllLines("GLS.txt");
-            List<AutoAdatok> autoLista = new List<AutoAdatok>();
+            
             foreach (var item in adatok)
             {
                 autoLista.Add(new AutoAdatok(item));
             }
             datagrid.ItemsSource = autoLista;
+        }
+
+        private void Felvitel_Click(object sender, RoutedEventArgs e)
+        {
+            if (autoLista.Find(x=>x.datum == datumBox.Text) != null)
+            {
+                MessageBox.Show("Már van ilyen dátum", "Hiba", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            AutoAdatok adat = new AutoAdatok(datumBox.Text, nevBox.Text, int.Parse(csomagokBox.Text), int.Parse(fogyasztasBox.Text), int.Parse(kmBox.Text));
+            autoLista.Add(adat);
+            datagrid.Items.Refresh();
+        }
+
+        private void Modositas_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
