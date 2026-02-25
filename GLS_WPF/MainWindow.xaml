@@ -28,7 +28,7 @@
 
             <Button x:Name="Felvitel" Content="Felvitel" Margin="5" Click="Felvitel_Click"/>
             <Button x:Name="Módosítás" Content="Módosítás" Margin="5" Click="Modositas_Click"/>
-            <Button x:Name="Mentés" Content="Mentés" Margin="5"/>
+            <Button x:Name="Mentés" Content="Mentés" Margin="5" Click="Mentes_Click"/>
         </StackPanel>
     </Grid>
 </Window>

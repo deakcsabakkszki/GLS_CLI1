@@ -114,5 +114,23 @@ namespace GLS_WPF
             }
             
         }
+
+        private void Mentes_Click(object sender, RoutedEventArgs e)
+        {
+            try 
+            {
+                List<string> adatok = new List<string>();
+                foreach(var item in autoLista)
+                {
+                    adatok.Add($"{item.datum};{item.sofNev};{item.napiKilometer};{item.kezbCsomagSzam};{item.napiFogyasztasLiter}");
+                }
+                File.WriteAllLines("GLS.txt", adatok);
+                MessageBox.Show("Sikeres Mentés!", "", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show("Sikertelen Mentés!", "", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }
