@@ -1,4 +1,6 @@
 ﻿using GLS_CLI1;
+using System;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -9,7 +11,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.IO;
 
 namespace GLS_WPF
 {
@@ -62,16 +63,39 @@ namespace GLS_WPF
             AutoAdatok adat = new AutoAdatok(datumBox.Text, nevBox.Text, int.Parse(csomagokBox.Text), int.Parse(fogyasztasBox.Text), int.Parse(kmBox.Text));
             autoLista.Add(adat);
             datagrid.Items.Refresh();
-
+            
         }
         private bool validalas()
         {
+            
             if(datumBox.Text==""||nevBox.Text==""||csomagokBox.Text==""||fogyasztasBox.Text=="") 
             {
                 MessageBox.Show("Hibás vagy hiányzó adat!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false; 
             }
+            DateOnly datum;
+            
+
+            if (DateOnly.TryParse(datumBox.Text, out datum) == false || datumBox.Text.Length!=10)
+            {
+                MessageBox.Show("Hibás vagy hiányzó adat!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+            try
+            { 
+                if (int.Parse(csomagokBox.Text) < 0 || int.Parse(fogyasztasBox.Text) < 0 || int.Parse(kmBox.Text) < 0)
+                {
+                    MessageBox.Show("Csak pozítiv nem nulla szám adható meg a beviteli mezőkben!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return false;
+                }
+            }
+            catch(FormatException ex)
+            {
+                MessageBox.Show("Csak pozítiv nem nulla szám adható meg a beviteli mezőkben!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
             return true;
+
         }
 
         private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
